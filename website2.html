@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: minmax(1250px, auto);
+            grid-template-rows: 2150px;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "head .";
+        }
+
+        .head {
+            display: grid;
+            grid-template-columns: minmax(1250px, auto);
+            grid-template-rows: 400px 300px 500px 500px 400px 50px;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "b1"
+                "b2"
+                "b3"
+                "b4"
+                "b5"
+                "b6";
+            grid-area: head;
+            background-color: #FFFFFF;
+
+
+        }
+
+        .b1 {
+            grid-area: b1;
+            background-color: rgb(247, 219, 219);
+            background-image: url("images/head.png");
+            background-size: cover;
+            font-family: sans-serif;
+        }
+
+        .b2 {
+            grid-area: b2;
+            background-color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 20px;
+            padding-left: 260px;
+            padding-right: 260px;
+            font-size: 20px;
+            font-family: sans-serif
+        }
+
+        .b2>h1 {
+
+
+
+            text-align: center;
+            padding-top: 20px;
+            font-family: sans-serif
+        }
+
+        .b2>p {
+            color: #5C5E5D;
+        }
+
+       
+
+
+
+        .b2>button {
+            background-color: #FFFFFF;
+            width: 100px;
+            height: 42px;
+            margin-top: 40px;
+            text-align: center;
+            border: solid #2F956D;
+
+
+            color: #2F956D;
+            font-weight: bold;
+        }
+        .b2>.buttonpizza{
+            background-color: #2F956D;
+            color:#ffffff
+        }
+
+        .b3 {
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 200px 200px;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            grid-template-areas:
+                "b31 b32 b33 b34"
+                "b35 b36 b37 b38";
+            grid-area: b3;
+            background-color: #FFFFFF;
+            font-family: sans-serif;
+        }
+
+        .b31 {
+            grid-area: b31;
+
+            background-image: url("images/ava.png");
+            background-size: cover;
+
+
+
+        }
+
+        .b32 {
+            grid-area: b32;
+            /* background-color: rgb(97, 42, 165); */
+            background-image: url("images/pizza.jpg");
+            background-size: cover;
+
+        }
+
+        .b33 {
+            grid-area: b33;
+            /* background-color: rgb(83, 42, 165); */
+            background-image: url("images/chicken salad.jpg");
+            background-size: cover;
+        }
+
+        .b34 {
+            grid-area: b34;
+            /* background-color: rgb(83, 42, 165); */
+            background-image: url("images/pasta.png");
+            background-size: cover;
+        }
+
+        .b35 {
+            grid-area: b35;
+            /* background-color: rgb(83, 42, 165); */
+            color: #5C5E5D;
+        }
+
+        .b36 {
+            grid-area: b36;
+            /* background-color: rgb(83, 42, 165); */
+            color: #5C5E5D;
+        }
+
+        .b37 {
+            grid-area: b37;
+            /* background-color: rgb(83, 42, 165); */
+            color: #5C5E5D;
+        }
+
+        .b38 {
+            grid-area: b38;
+            /* background-color: rgb(83, 42, 165); */
+            color: #5C5E5D;
+        }
+
+        .para {
+            color: #5C5E5D;
+
+        }
+
+        .b5 {
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 550px 550px;
+            grid-template-rows: 250px;
+            gap: 0px 0px;
+            grid-template-areas:
+                "b51 b52";
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            grid-area: b5;
+            font-family: sans-serif;
+            padding-bottom: 40px;
+        }
+
+        .b51 {
+            grid-area: b51;
+            background-color: #F6BDD0;
+        }
+
+        .b52 {
+            grid-area: b52;
+            background-color: #FFFFFF;
+            text-align: center;
+            padding-top: 20px;
+
+            font-family: sans-serif
+        }
+
+        .b52>h1 {
+            color: #395E79;
+
+        }
+
+        .b52>p {
+            color: #5C5E5D;
+
+
+        }
+
+        .button5>button {
+            background-color: #FFFFFF;
+            width: 100px;
+            height: 32px;
+            margin-top: 40px;
+            border: solid #606463;
+            color: #606463;
+            font-weight: bold;
+
+
+        }
+
+        .b6 {
+            grid-area: b6;
+            background-color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            color: #606463;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .b4 {
+            display: grid;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 200px 200px;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            justify-content: space-evenly;
+            align-content: space-evenly;
+            grid-template-areas:
+                "b41 b42 b43 b44"
+                "b45 b46 b47 b48";
+            grid-area: b4;
+            background-color: #FFFFFF;
+            font-family: sans-serif;
+        }
+
+        .b41 {
+            grid-area: b41;
+
+            background-image: url("images/angryimg_1694972784689.png");
+            background-size: cover;
+        }
+
+        .b42 {
+            grid-area: b42;
+
+            background-image: url("images/toast.png");
+            background-size: cover;
+        }
+
+        .b43 {
+            grid-area: b43;
+
+            background-image: url("images/salad.jpg");
+            background-size: cover;
+        }
+
+        .b44 {
+            grid-area: b44;
+
+            background-image: url("images/momo.jpg");
+            background-size: cover;
+        }
+
+        .b45 {
+            grid-area: b45;
+            /* background-color: brown; */
+            color: #5C5E5D;
+
+
+
+
+        }
+
+        .b46 {
+            grid-area: b46;
+            color: #5C5E5D;
+
+        }
+
+        .b47 {
+            grid-area: b47;
+            color: #5C5E5D;
+
+        }
+
+        .b48 {
+            grid-area: b48;
+            color: #5C5E5D;
+
+        }
+
+        .ava {
+            height: 300px;
+            position: relative;
+            left: 180px;
+            top: -20px
+        }
+
+        .heads {
+            font-size: 21px;
+            color: #57688E;
+
+
+        }
+
+        .rate {
+            color: #4A917A;
+        }
+
+        span {
+            color: #3624BE;
+            text-decoration: underline;
+        }
+
+        .nav{
+            padding-top: 260px;
+            
+            
+        }
+
+        .navcompanyname {
+            width: 20%;
+          
+             display: inline-block;
+            height: 100%;
+            padding-left: 40px;
+            padding-top: 6px;
+            color: #ffffff;
+
+        }
+
+        .navmenu {
+            width: 79%;
+
+            display: inline-block;
+            height: 100%;
+            text-align: right;
+            padding-left: 200px;
+
+           
+
+        }
+
+        .navmenu>ul {
+            display: inline-block;
+            padding-left: 200px;
+
+
+        }
+
+        .navmenu>ul>li {
+            display: inline-block;
+            margin-right: 55px;
+
+
+
+        }
+
+        .navmenu>ul>li>a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff;
+
+
+        }
+        
+        .home{
+            text-decoration: underline white;
+
+        }
+        .button5{
+            width:100%;
+            text-align: right;
+            margin-top: 35px;
+        }
+        .buttonpizza{
+            color: #2F956D;
+            background-color: #3624BE;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+
+            <div class="b1">
+
+                <div class="nav">
+                    <div class="navcompanyname">
+                        <h1>Simple House</h1>
+                        <p>
+                            new restaurant template
+                        </p>
+                    </div>
+                    <div class="navmenu">
+                        <ul>
+                            
+                            <li  class="home"><a href="">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="b2">
+                <h1>
+                    Welcome to Simple House
+                </h1>
+                <br>
+                <p>
+                    We have been making yummy and delicious foods with love. Here we sell the famous food around thw world. We make foods with all organic ingredients. Hope you all like our foods and don"t forgot to leave your ratings!
+                </p>
+                <button class="buttonpizza">
+                    Pizza
+                </button>
+
+                <button>
+                    Salad
+                </button>
+                <button>
+                    Noddles
+                </button>
+            </div>
+
+            <div class="b3">
+                <div class="b31"></div>
+                <div class="b32"></div>
+                <div class="b33"></div>
+                <div class="b34"></div>
+                <div class="b35">
+                    <h1 class="heads">Fusce dictum fin</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+
+                <div class="b36">
+                    <h1 class="heads">Aliquam sagittis</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+
+                <div class="b37">
+                    <h1 class="heads">Sed varius turpis</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+
+                <div class="b38">
+                    <h1 class="heads">Aliquam sagittis</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+            </div>
+            <div class="b5">
+                <div class="b51">
+                    <img src="images/angryimg_1694977128012.png" alt="avacado" class="ava">
+                </div>
+                <div class="b52">
+
+                    <h1>
+                        Maecenas nulla neque
+                    </h1>
+                    <br>
+                    <p>
+                        Redistributing this template as a downloadable ZIP file on
+                        any template collection site is strictly prohibited. You will
+                        need to <span>talk to us</span> for additional permissions about our
+                        templates. Thank you
+                    </p>
+<div class="button5">
+                    <button>
+                        Read more
+                    </button>
+                </div>
+
+                </div>
+            </div>
+            <div class="b6">
+                <p>Copyright&copy2023 Simple House | Design:Template Model </p>
+            </div>
+            <div class="b4">
+                <div class="b41">
+
+                </div>
+                <div class="b42"></div>
+                <div class="b43"></div>
+                <div class="b44"></div>
+
+                <div class="b45">
+                    <h1 class="heads">Maceas eget juso</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+
+                <div class="b46">
+                    <h1 class="heads">Quisque et fis eros</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+
+                <div class="b47">
+                    <h1 class="heads">Sed ulticies dui</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+
+                <div class="b48">
+                    <h1 class="heads">donec porta conse</h1>
+                    <br>
+                    <p class="para">
+                        Nam in suscipit nisi, sit amet
+                        consectetur metus. Ut sit amet
+                        tellus accumsan
+
+                    </p>
+                    <br>
+                    <p class="rate"> &#36;45 / &#36;55</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
